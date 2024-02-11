@@ -15,6 +15,7 @@ sol: The basic recursive Fibonacci algorithm has an exponential time complexity,
 
 3. Comment on way's you could improve your implementation (you don't need to do it just discuss it)
 sol:
+
 Memoization: To save and reuse previously computed results, utilize memoization. This can improve the algorithm's performance and significantly reduce the number of unnecessary calculations, especially for bigger values of n.
 
 Bottom-Up Dynamic Programming: Use bottom-up dynamic programming, often known as an iterative technique, to implement the Fibonacci sequence. This involves removing the recursion overhead by building the solution from the smallest subproblems upwards.
