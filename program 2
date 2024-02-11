@@ -1,0 +1,38 @@
+"""
+Problem 2
+
+Given a sorted array array of size N, the task is to remove the duplicate elements from the array.
+
+Examples: 
+
+Input: array = [2, 2, 2, 2, 2]
+Output: array= [2]
+Explanation: All the elements are 2, So only keep one instance of 2.
+
+Input: array = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+Output: array[] = {1, 2, 3, 4, 5}
+
+Note, you can't use something like the set container in C++.
+"""
+
+def remove(arr):
+    n = len(arr)
+
+    if n == 0:
+        return []
+
+    result = [arr[0]]
+
+    for i in range(1, n):
+        if arr[i] != arr[i - 1]:
+            result.append(arr[i])
+
+    return result
+
+arr1 = [2, 2, 2, 2, 2]
+finalresult1 = remove(arr1)
+print(finalresult1)  # Output: [2]
+
+arr2 = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+finalresult2 = remove(arr2)
+print(finalresult2)  # Output: [1, 2, 3, 4, 5]
