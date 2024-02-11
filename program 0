@@ -1,0 +1,29 @@
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n-1) + fibonacci(n-2)
+
+
+def printfib(n):
+    print(f"fib({n})", end="")
+    if n == 0:
+        print(" -> 0")
+        return 0
+    if n == 1:
+        print(" -> 1")
+        return 1
+    
+    finalresult = fibonacci(n-1) + fibonacci(n-2)
+    print(f" -> {finalresult}")
+    return finalresult
+
+finalresult = printfib(5)
+print(finalresult) 
+
+""" 
+output: fib(5) -> 5
+5
+"""
+
